@@ -1,4 +1,9 @@
 # AI Customer Support Simulator
+***with CrewAI***
+
+
+**🌐 See the Live Application at:**
+[https://ai-customer-support-simulator.vercel.app/](https://ai-customer-support-simulator.vercel.app/)
 
 A multi-agent training & evaluation platform that simulates customer support interactions (chat, email, and voice) with realistic customers, live policies, and knowledge bases—then auto-scores responses, coaches the agent, and exports QA reports/macros to your help desk.
 
@@ -36,6 +41,9 @@ The AI Customer Support Simulator is a practical sandbox where support reps and 
 ## 🤖 AI Agents Framework Choice: CrewAI
 
 This simulator uses **CrewAI** to orchestrate multiple specialized agents (customer, triage, knowledge, compliance, coaching, supervisor, scribe, scoring). CrewAI provides a clear mental model (roles → tasks → tools) and predictable execution that maps well to customer support workflows.
+
+**🌐 See the Live Application at:**
+[https://ai-customer-support-simulator.vercel.app/](https://ai-customer-support-simulator.vercel.app/)
 
 ### 🔬 Framework comparison (HTML matrix)
 
@@ -101,45 +109,7 @@ This simulator uses **CrewAI** to orchestrate multiple specialized agents (custo
 - **Python everywhere**: Works smoothly with FastAPI, Celery, and analytics stack.
 - **Enough structure, not too rigid**: Balances control with developer velocity.
 
-## 🚀 Quick Start
 
-### Prerequisites
-
-- Docker & Docker Compose
-- Node.js 18+ 
-- Python 3.11+
-- Git
-
-### Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd ai-customer-support-simulator
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm run setup
-   ```
-
-3. **Configure environment**
-   ```bash
-   cp env.example .env
-   # Edit .env with your configuration
-   ```
-
-4. **Start development environment**
-   ```bash
-   npm run dev
-   ```
-
-5. **Access the application**
-   - Frontend: http://localhost:3000
-   - API Gateway: http://localhost:3001
-   - API Docs: http://localhost:3001/api
-   - Orchestrator: http://localhost:8000
-   - MinIO Console: http://localhost:9001
 
 ### Voice setup (ASR + TTS)
 
@@ -151,20 +121,7 @@ Notes:
 - ASR uses Deepgram (best with `audio/webm;codecs=opus` or `audio/ogg;codecs=opus`). The app falls back to `audio/webm` and client-side `WAV PCM 16k mono` if needed.
 - TTS uses TTSOpenAI with webhook completion; audio is pushed back to the session and auto-plays on customer replies.
 
-## 🏗️ Architecture
 
-### Monorepo Structure
-
-```
-ai-customer-support-simulator/
-├── apps/
-│   ├── frontend/          # Next.js 14 + React 18
-│   ├── gateway/           # NestJS API Gateway
-│   ├── orchestrator/      # FastAPI + CrewAI
-│   └── workers/           # Python Celery Workers
-├── packages/
-│   └── sdk/              # Shared TypeScript SDK
-└── docker-compose.dev.yml
 ```
 
 ### Services
