@@ -2,9 +2,6 @@
 ***with CrewAI***
 
 
-**🌐 See the Live Application at:**
-[https://ai-customer-support-simulator.vercel.app/](https://ai-customer-support-simulator.vercel.app/)
-
 A multi-agent training & evaluation platform that simulates customer support interactions (chat, email, and voice) with realistic customers, live policies, and knowledge bases—then auto-scores responses, coaches the agent, and exports QA reports/macros to your help desk.
 
 ## What's new (2025-10)
@@ -42,8 +39,6 @@ The AI Customer Support Simulator is a practical sandbox where support reps and 
 
 This simulator uses **CrewAI** to orchestrate multiple specialized agents (customer, triage, knowledge, compliance, coaching, supervisor, scribe, scoring). CrewAI provides a clear mental model (roles → tasks → tools) and predictable execution that maps well to customer support workflows.
 
-**🌐 See the Live Application at:**
-[https://ai-customer-support-simulator.vercel.app/](https://ai-customer-support-simulator.vercel.app/)
 
 ### 🔬 Framework comparison (HTML matrix)
 
@@ -122,7 +117,7 @@ Notes:
 - TTS uses TTSOpenAI with webhook completion; audio is pushed back to the session and auto-plays on customer replies.
 
 
-```
+---
 
 ### Services
 
